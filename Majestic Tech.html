@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<link rel="icon" type="image/png" href="https://majestic-rp.ru/img/Home/instruction/watch.svg">
+
+		<title>Majestic RP - Решение частых проблем.</title>
+
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i" rel="stylesheet"> 
+		
+		<style type="text/css">
+		* {
+			font-family: "Open Sans";
+		}
+		body {
+			height: 1080px;
+			margin: 6em 2em 2em 2em;
+		}
+
+		body:before {
+			content: '';
+			position: fixed;
+			top: 2%;
+			right: 3%;
+			height: 100px;
+			width: 100px;
+			background-size: contain;
+			z-index: 10;
+			opacity: 0.1;
+		}
+
+		b {
+			font-weight: 600 !important;
+		}
+
+		button {
+			padding: 0.6em;
+			border-radius: 3px;
+			border: 2px solid hsl(336, 100%, 54%);
+			margin-left: 2em;
+			background: rgba(0,0,0,0.05);
+			transition: 0.4s;
+		}
+
+		button:hover {
+			background: #fff;
+			transition: 0.4s;
+		}
+		
+		button2 {
+			padding: 0.6em;
+			border-radius: 3px;
+			border: 2px solid #747c93;
+			margin-left: 2em;
+			background: rgba(0,0,0,0.05);
+			transition: 0.4s;
+		}
+
+		button2:hover {
+			background: #fff;
+			transition: 0.4s;
+		}
+
+		#content {
+			max-width: 1062px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		h1, h2, h3, h4 {
+			font-weight: 600;
+		}
+
+		h1 {
+			position: fixed;
+			background: -moz-linear-gradient(218deg, rgba(255,11,114,1) 33%, rgba(64,5,29,1) 100%);
+			background: -webkit-linear-gradient(218deg, rgba(255,11,114,1) 33%, rgba(64,5,29,1) 100%);
+			background: linear-gradient(218deg, rgba(255,11,114,1) 33%, rgba(64,5,29,1) 100%);
+			color: #ffffff;
+			width: 100%;
+			opacity: 0.98;
+			height: 40px;
+			padding: 10px 10px 10px 1em;
+			left: 0;
+			top: 0;
+			margin: 0;
+			z-index: 1;
+		}
+
+		h1 img {
+			height: 40px;
+			vertical-align: middle;
+			margin-bottom: 8px;
+		}
+
+		h2.heading {
+			margin-bottom: -10px;
+		}
+
+		h3 {
+			font-size: 130%;
+		}
+
+		h4.sub {
+			margin-top: -7px;
+		}
+
+		a { 
+			color: rgba(0, 56, 182, 0.9); 
+			transition: 0.3s;
+			text-decoration: none;
+		}
+
+		a:hover { 
+			color: rgba(226, 0, 0, 1); 
+			text-decoration: underline;
+		}
+
+		pre {
+			background: rgba(0,0,0,0.05);
+			font-family: "Verdana";
+			font-size: 14px;
+			margin-left: 2em;
+			padding: 5px;
+			/*border-left: 6px solid #00980e;
+			border-top: 1px solid #00980e;
+			border-right: 1px solid #00980e;
+			border-bottom: 1px solid #00980e;*/
+			border-left: 4px solid #fd1471;
+			border-radius: 5px;
+			white-space: pre-wrap;
+		}
+
+		.faq pre {
+			margin-bottom: 2em;
+		}
+
+		.thankyoubox {
+			background-color: rgba(0,0,0,0.05);
+			padding-top: 3%;
+			padding-bottom: 3%;
+			background:
+				linear-gradient(
+					to left, 
+					rgba(92,20,8,1) 0%,
+					rgba(134,40,29,1) 12%,
+					rgb(255, 13, 110) 47%,
+					rgba(84,8,0,1) 100%
+				)
+				left 
+				bottom
+				#F2F2F2    
+				no-repeat; 
+			background-size: 100% 5px;
+			border-radius: 15px;
+		}
+
+		.button {
+			width: 32px;
+			height: 32px;
+			cursor: pointer;
+			outline: none;
+			color: #fff;
+			background-color: #4CAF50;
+			margin-left: 0;
+			margin-top: -1em !important;
+			position: absolute;
+			top: 26px;
+			right: 64px;
+		}
+
+		.button:hover {
+			background-color: #3e8e41
+		}
+
+		.hilight {
+			color: #2752ce;
+		}
+
+		.indented {
+			padding-left: 2em;
+		}
+
+		.underlined {
+			text-decoration: underline;
+		}
+
+		i {
+			padding-right: 2px;
+		}
+
+		.playbtn {
+			background: rgba(0,0,0,0) url(https://b.catgirlsare.sexy/2Lh4.png) !important;
+			transition: 0.4s;
+		}
+
+		.stopbtn {
+			background: rgba(0,0,0,0) url(https://b.catgirlsare.sexy/pHiR.png) !important;
+			transition: 0.4s;
+		}
+
+		.playbtn, .stopbtn {
+			opacity: 0.6;
+		}
+
+		.playbtn:hover, .stopbtn:hover {
+			opacity: 1.0 !important;
+		}
+		button.devnotes {
+		background-color: #e4e4e4;;
+		color: #1c00ab;
+		cursor: pointer;
+		width: 48%;
+		border: 1px;
+		text-align: left;
+		outline: 1px;
+		font-size: 15px;
+		transition: 1.0s;
+		}
+
+		button.devnotes.active, button.devnotes:hover {
+		background-color: hsl(336, 100%, 53%); 
+		color: #ffffff;
+		}
+
+		div.panel {
+		padding: 0 18px;
+		display: none;
+		background-color: white;
+		}	
+
+		hr.style1 {
+			border-top: 1px dashed #474646;
+			border-bottom: 1px dashed #fff;
+		}
+		
+		hr.style2 { 
+		border: 0; 
+		height: 1px; 
+		background-color: #141414;
+		}
+		
+		hr.style3 { 
+		height: 30px; 
+		border-style: solid; 
+		border-color: #8c8b8b; 
+		border-width: 1px 0 0 0; 
+		border-radius: 20px; 
+		} 
+		hr.style3:before { 
+		display: block; 
+		content: ""; 
+		height: 30px; 
+		margin-top: -31px; 
+		border-style: solid; 
+		border-color: #8c8b8b; 
+		border-width: 0 0 1px 0; 
+		border-radius: 20px; 
+		}		
+		</style>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script>import ('https://fonts.googleapis.com/css?family=Proxima+Nova');</script>
+
+		<!--<script type="text/javascript">
+			var currentState = "playing";
+			var playingState = "playing";
+			var pausedState = "paused";
+
+			function updateMyState() {
+				var elem = document.getElementById("scbutton");
+
+				console.log("NVE" + elem);
+
+				if (currentState == playingState) {
+					currentState = pausedState;
+					elem.setAttribute("class", "button stopbtn");
+				} else {
+					currentState = playingState;
+					elem.setAttribute("class", "button playbtn");
+				}
+			}
+		</script> -->
+
+		<base target="_blank">
+	</head>
+	<body>
+		<div id="content">
+		<center>
+			<h1>
+				<img src="https://majestic-rp.ru/img/Home/main/majestic.svg"> 
+				Решение частых проблем.
+				<!--<button class="button playbtn" id="scbutton" type=submit onclick="updateMyState();" style="outline:none; background-color: Transparent;  border: none;"></button>-->
+			</h1>
+			
+			<!--
+			<iframe width="900" height="485" src="https://www.youtube.com/embed/Irx-27XTON8" frameborder="0" allowfullscreen></iframe>
+			</center>
+		
+			<br />
+		
+			<script src="https://apis.google.com/js/platform.js"></script>
+
+			<div class="g-ytsubscribe" data-channel="worst" data-layout="default" data-count="hidden"></div> 
+			-->
+		
+		
+		<!--<iframe width="900" height="485" src="https://www.youtube.com/embed/-S24gQntcWg?hd=1" frameborder="0" allowfullscreen></iframe>-->
+		</center>
+		<h2 class="heading">Решения часто возникающих проблем</h2>
+		<hr size="4" color="#000000">
+				<h4>Не удается найти “ragemp_v.exe“. Проверьте, правильно ли указано имя и повторите попытку.</h4>
+<pre>
+• Отключите ваш антивирус или защитник Windows и после этого переустановите клиент RAGEMP на диск “C”.​
+</pre>
+<h4>Failed to retrieve the install direcdtory. Specity your game path now? Press cancel to terminate RAGE Multiplayer.</h4>
+<pre>
+• Проверьте путь к лицензионной версии игры GTA 5 и запомните его. После этого нажмите кнопку “OK” и выберите путь к игре GTA 5.
+</pre>
+<h4>Не удаётся продолжить выполнение кода, поскольку система не обнаружила VCRUNTIME140_1.dlll. Для устранения этой проблемы попробуйте переустановить программу.</h4>
+<pre>
+• Попробуйте переустановить RAGEMP.
+• Если не поможет, то скачайте данный файл - https://aka.ms/vs/16/release/vc_redist.x64.exe
+</pre>
+<h4>System.ComponentModel.Win32Exception (0x80004005).</h4>
+<pre>
+• Отключите любое антивирусное программное обеспечение и попробуйте снова установить Rage Multiplayer.
+• Если отключение антивируса по-прежнему не исправляет это, щелкните правой кнопкой мыши на Rage MP и выберите «Устранение неполадок совместимости».
+</pre>
+<h4>Cant join server... trying again.</h4>
+<pre>
+• Отключите ваш роутер на 10-15 минут.
+• Если это не поможет - зайдите на сервер с помощью VPN
+</pre>
+<h4>*Undefinded 0*.</h4>
+<pre>
+• RAGE MP конфликтует с Windows 8 и 8.1, Вы сможете заходить на сервера, но только с нескольких попыток. Рекомендуем вам сменить версию Windows на другую.
+</pre>
+<h4>Зависис курсор по середине экрана.</h4>
+<pre>
+• Зайдите в сюжетный режим GTA, далее нажимаете ESC > Настройки > Мышь/Клавиатура > Способ ввода мыши > Поставить «Raw Input».
+</pre>
+<h4>При запуске RAGE ничего не происходит.</h4>
+<pre>
+• Отключите Ваш антивирус.
+• Если он выключен, переустановите RAGE.
+</pre>
+<h4>Иероглифы в чате игры вместо русских символов.</h4>
+<pre>
+• Решение - https://remontka.pro/fix-cyrillic-windows-10/
+</pre>
+<h4>Любая проблема с донатом.</h4>
+<pre>
+• Вам нужно написать на почту - help@majestic-rp.ru 
+</pre>
+
+
+
+<!--		<button title="Click to show/hide content" type="button" onclick="if(document.getElementById('hidden') .style.display=='none') {document.getElementById('hidden') .style.display=''}else{document.getElementById('hidden') .style.display='none'}"><b>View Previous Change Logs</b></button>
+		<br /> -->
+		<h2 class="heading">ИНФА123</h2>
+		<hr size="4" color="#000000">
+		<h4>ИНФА123ИНФА123</h4> 
+
+		<pre>
+ИНФА123
+</pre>
+
+		<br />
+		<h2 class="heading">123</h2>
+		<hr size="4" color="#000000">
+
+		<p>
+		123<br />
+		123
+		</p>
+
+		<h4>123</h4>
+		<p class="indented">
+		<pre>123.</pre>
+		</p>
+		<!--
+		<h2 class="heading">Updating</h2>
+		<hr size="4" color="#000000">
+
+		<h4>Are you a returning NVE user looking to update? Read this.</h4>
+
+		<p>
+		In order to update your game to the newest version of this mod, first run the "<i>NaturalVision Installer</i>" .OIV file. 
+		<br />
+		Next, copy everything from inside the folder labeled "<i>Main Files</i>" and paste it into your GTAV game folder.
+		<br /> <br />
+		Next, go through the "<i>Optional Add-Ons</i>" folder and install anything that you need.
+		<br /><br />
+		Now you're ready to play.
+		<br /><br />
+		<font size="5">
+		If you are <i><u>not</u></i> a returning user, then please follow all of the install instructions listed below.
+		</font>
+		</p>
+		<br />
+		-->
+	
+		<h2 class="heading">321</h2>
+		<hr size="4" color="#000000">
+
+		<h3>Пример картинки:</h3>
+		<p class="indented">
+			<a href="https://i.imgur.com/HMO8k9s.png" target="_blank"><img src="https://i.imgur.com/HMO8k9s.png" width="250" height="140"><br /><i><font size="2"><b>Нажмите чтобы раскрыть.</font></i></b></a>
+		</p>
+
+
+<!--
+<h2 class="heading">Timecycle Script</h2>
+<hr size="4" color="#000000">
+<pre>
+The "timecyclemods.asi" script that you installed in <b>Step 5</b> is part of the main files and will <b>improve</b> the lighting and tonemapping in select weathers.
+
+There is <b><u>no performance loss</b></u> with this script.
+</pre>
+
+<button class="devnotes"><b>Click here if you are a developer looking to modify the above script</b></button>
+<div class="panel">
+<pre>
+<center><u><b>Developer Notes</b></u></center>
+<u><b>Keys:</b></u>
+
+    You can edit the Reload and Toggle keys.
+    
+    If you set them like this...
+    
+    ToggleKey=0x33
+    ReloadKey=0x34
+    
+    Then pressing 3 on your keyboard will toggle it off and pressing 4 on your keyboard will toggle it on / reload the script
+	
+<u><b>Editing the config file:</b></u>
+
+    Changing Enable=0 to Enable=1 will (obviously) enable the modifier for that weather.
+    Strength for 1.0 means 100% intensity
+	
+<u><b>Transition Time</b></u>
+
+    This variable slowly changes the tonemapping between each weather over a period of time in order 
+    to create a smooth transition. Setting it to 0.01 will instantly transition the modifier from weather to weather, 
+    while increasing the value will transition over a longer period of time.
+ 
+<u><b>Usage</b></u>
+
+    You must ask for permission before uploading this script with your own mod. 
+    Depending on several things, you may or may not be granted permission.
+	
+<u><b>Custom Modifiers</b></u>
+
+    You can create your own modifier with tonemap settings inside of a timecycle_mods_*.xml file.
+    
+    Example:
+
+<textarea name="text" cols="80" rows="14">
+    <modifier name="Rain" numMods="18" userFlags="0">
+	<postfx_tonemap_filmic_override_dark>1.000 0.000</postfx_tonemap_filmic_override_dark>
+	<postfx_tonemap_filmic_exposure_dark>16.000 0.000</postfx_tonemap_filmic_exposure_dark>
+	<postfx_tonemap_filmic_a>4.400 0.000</postfx_tonemap_filmic_a>
+	<postfx_tonemap_filmic_b>2.280 0.000</postfx_tonemap_filmic_b>
+	<postfx_tonemap_filmic_c>14.800 0.000</postfx_tonemap_filmic_c>
+	<postfx_tonemap_filmic_d>10.200 0.000</postfx_tonemap_filmic_d>
+	<postfx_tonemap_filmic_e>-8.000 0.000</postfx_tonemap_filmic_e>
+	<postfx_tonemap_filmic_f>1.400 0.000</postfx_tonemap_filmic_f>
+	<postfx_tonemap_filmic_w>5.000 0.000</postfx_tonemap_filmic_w>
+	<postfx_tonemap_filmic_override_bright>1.000 0.000</postfx_tonemap_filmic_override_bright>
+	<postfx_tonemap_filmic_exposure_bright>-2.400 0.000</postfx_tonemap_filmic_exposure_bright>
+	<postfx_tonemap_filmic_a_bright>4.400 0.000</postfx_tonemap_filmic_a_bright>
+	<postfx_tonemap_filmic_b_bright>0.660 0.000</postfx_tonemap_filmic_b_bright>
+	<postfx_tonemap_filmic_c_bright>0.022 0.000</postfx_tonemap_filmic_c_bright>
+	<postfx_tonemap_filmic_d_bright>1.080 0.000</postfx_tonemap_filmic_d_bright>
+	<postfx_tonemap_filmic_e_bright>0.010 0.000</postfx_tonemap_filmic_e_bright>
+	<postfx_tonemap_filmic_f_bright>1.600 0.000</postfx_tonemap_filmic_f_bright>
+	<postfx_tonemap_filmic_w_bright>5.600 0.000</postfx_tonemap_filmic_w_bright>
+   </modifier></textarea>
+	
+	The best way to create the perfect setting is by downloading the <a href="https://www.gta5-mods.com/tools/visualsettings-dat-reloader">Timecycle Reloader</a> and 
+	editing the tonemap settings in your visualsettings.dat file.
+	
+	Once you are done editing for a specific weather, open up a timecycle_mods_*.xml file and create a custom modifier 
+	using the above example.
+    
+	Lastly you just replace the "postfx_tonemap_filmic" values with the values from your visualsettings.dat file.
+	
+<u><b>Global Modifiers</b></u>
+
+     The global modifier is supposed to be your default tonemapping in visualsettings after 
+     porting it over to timecyclemods_*.xml under the name of Global or something else.	 
+	 
+     I recommend creating a global modifier and setting it for each weather in which you don't plan on modifying the lighting.
+____________________________________________________________________________
+
+    <b>You can ignore the "[TIMECYCLE]" part inside the config file. It's set to Enable=0 and isn't important.
+	
+     If you have any questions then please leave a comment on the mod page.</b>
+
+</pre>
+</div>
+<script>
+var acc = document.getElementsByClassName("devnotes");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+-->
+</pre>
+<br />
+<h2 class="heading">Discord Server</h2>
+<hr size="4" color="#000000">
+
+Join this Discord server if you need support or want to chat with other modders:
+<br />
+<br />
+<b>
+<a href="https://discord.gg/majestic">Discord.gg/majestic</a></b>
+<br />
+<br />
+<h2 class="heading">Credits</h2>
+<hr size="4" color="#000000">
+
+<style>
+gl {
+	text-shadow: 0 0 4px #f8d800;
+}
+</style>
+
+<h2><u>love</u></h2>
+<a href=""><gl><font color="#080469">NullRouted</a></font></gl>  &#10026;
+<br />
+<a href=""><gl><font color="#080469">Aitch Matter</a></font></gl>  &#10026;
+<br />
+<a href=""><gl><font color="#080469">Pedro</a></font></gl>  &#10026;
+
+<br />
+<br />
+<br />
+<br />
+
+<hr size="4" color="#000000">
+
+
+<img src="http://www.clustrmaps.com/map_v2.png?d=hpVZITlyfUPxq8pBL3m0n-t1UWVMrhwTGsNcw4z45AM&cl=ffffff" width="0" height="0"></a>
+
+<!--<script src="http://w.soundcloud.com/player/api.js"></script>
+<script>
+   $(document).ready(function() {
+	 var widget = SC.Widget(document.getElementById('soundcloud_widget'));
+	 widget.bind(SC.Widget.Events.READY, function() {
+	   console.log('Ready...');
+	 });
+	 widget.toggle();
+	 $('button').click(function() {
+	   widget.toggle();
+	 });
+   });
+   
+ </script>
+
+<iframe id="soundcloud_widget" width="0%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1047424750&amp;color=00cc11&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+<script>document.getElementById('scbutton').click();</script>-->
+
+
+
+</div>
+<center>
+<img src="https://i.pinimg.com/originals/7d/ac/fa/7dacfae19e5229d546ef60f84e4174ea.png" width="1540px" height="400px"></center>
+</body>
+</html>
